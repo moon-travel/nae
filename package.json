@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run assets",
     "dev": "vite --host 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "build": "tsc --noEmit && vite build",
+    "build": "npm run assets && tsc --noEmit && vite build",
     "assets": "node scripts/setup-assets.mjs"
   },
   "dependencies": {

@@ -22,7 +22,7 @@ npm run test
 npm run build
 ```
 
-`npm run assets` はインストール済み `@mediapipe/tasks-vision` からWASMを `public/models/mediapipe/` にコピーし、公式のPose Landmarker Fullモデルを `public/models/pose_landmarker_full.task` に取得します。実行時はこれらのローカル配信アセットを使い、有料APIは使いません。本番でカメラを使うにはHTTPSが必要です。localhostはブラウザのsecure contextとして扱われます。
+Pose Landmarker Fullモデルは `public/models/pose_landmarker_full.task` に含めています。`npm run dev` と `npm run build` は事前に `npm run assets` を実行し、インストール済み `@mediapipe/tasks-vision` からWASMを `public/models/mediapipe/` にコピーします。モデルがない場合のみ、セットアップスクリプトが公式配布元から取得します。Vercelでも `npm run build` を実行すれば、モデルとWASMが `dist/models/` に含まれます。実行時はこれらのローカル配信アセットを使い、有料APIは使いません。本番でカメラを使うにはHTTPSが必要です。localhostはブラウザのsecure contextとして扱われます。
 
 ## 構成とデータ
 

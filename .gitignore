@@ -1,4 +1,4 @@
 node_modules/
 dist/
-public/models/
+public/models/mediapipe/
 .DS_Store
